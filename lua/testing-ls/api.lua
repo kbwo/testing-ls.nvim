@@ -1,12 +1,10 @@
 local utils = require "testing-ls.utils"
 local c = require "testing-ls.protocol.constants"
 
-local get_testing_ls_client = utils.get_testing_ls_client
-
 local M = {}
 
 function M.run_file_test()
-  local testing_ls_client = get_testing_ls_client(0)
+  local testing_ls_client = utils.get_testing_ls_client(0)
   if testing_ls_client == nil then
     return
   end
